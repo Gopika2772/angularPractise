@@ -1,0 +1,16 @@
+<p>welcome to {{hotelName}}</p>
+<div [hidden]="hideRooms">
+    <!-- hidden use panna dom la irundhu pogadhu  -->
+    Number of rooms:
+    <div [innerText]="numberOfRooms"></div>
+</div>
+<!-- optional chaining -->
+{{rooms?.availableRooms?? "no rooms"}}
+
+<div *ngIf="rooms?.availableRooms ">
+    Rooms List
+    <!-- {{roomList}} -->
+    <!-- dom la irunde poidum -->
+</div>
+<!-- property binding -->
+<button (click)="toggle()">Toggle</button>
